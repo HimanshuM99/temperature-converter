@@ -1,0 +1,12 @@
+celsius = document.getElementById('celsius')
+fahrenheit = document.getElementById('fahrenheit');
+
+celsius.oninput = () => {
+    output=(parseFloat(celsius.value)*9) / 5 + 32;
+    fahrenheit.value = parseFloat(output.toFixed(2));
+};
+
+fahrenheit.oninput = () => {
+    output = ((parseFloat(fahrenheit.value) - 32) *5) / 9;
+    celsius.value=parseFloat(output.toFixed(2));
+};
